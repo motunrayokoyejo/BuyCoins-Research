@@ -1,0 +1,19 @@
+//Why is it a bad idea to use recursion method to find the fibonacci of a number? 
+
+def fibonacci(n):
+ if n <= 1:
+       return n
+   else:
+    return(fibonacci(n-1) + fibonacci(n-2))
+    
+    The Fibonacci sequence is the integer sequence in which every number after the first two is the sum of the two preceding numbers.
+    for example: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144. Recursion functions are functions that call themselves.
+    
+    It is a bad idea to use recursion to find the fibonacci of a number because the computing power required to calculate larger terms of the series is immense. 
+    The number of times the function is called will cause a stack overflow.
+    
+    Looking at the function above, we check if the given number is less than or equal to one and we return the number,
+    If we pass a number that is greater than 0 and 1. 
+    Then we make two recursive calls where we add both calls with the nth number minus 1 and 2 in both calls.
+    if we pass higher numbers like 90,120, 200, It takes a longer time for it to give us our fibonacci number which is a result of the 
+    heavy push-pop of the stack memory in each recursive call.
